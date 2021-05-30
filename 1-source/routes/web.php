@@ -35,6 +35,7 @@ Route::get('/searchCompanies',[SearchController::class,'search']);
 
 
 
+
 Route::fallback(function () {
     return view('404');
 })->name('NotFound');
@@ -42,3 +43,6 @@ Route::fallback(function () {
 Route::get('/error', function () {
     return view('error');
 })->name('Error');
+
+Route::get('/getCompanyType/{id}', [CategoryController::class,'getCompanies']);
+Route::get('/page', [CategoryController::class,'getCompanies']);

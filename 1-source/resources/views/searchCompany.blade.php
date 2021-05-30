@@ -44,6 +44,10 @@
 </form>
 
 <div class="container">
+<form action='http://127.0.0.1:8000/searchCompanies' method="GET">
+            <input type="text" name="name" id="name">
+            <button type="submit">Submit</button>
+        </form>
     <div class="row">
         <table class="table">
             <thead>
