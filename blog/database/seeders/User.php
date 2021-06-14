@@ -2,12 +2,9 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Str;
-use App\Models\User;
 use Illuminate\Database\Seeder;
 
-class users extends Seeder
+class User extends Seeder
 {
     /**
      * Run the database seeds.
@@ -19,7 +16,6 @@ class users extends Seeder
         for ($i = 0; $i < 10; $i++) {
             DB::table('users')->insert([
                 'user_id' => random_int(1, 9999),
-                'user_name' => random_int(1, 9999),
                 'user_mail' => random_int(1, 9999),
                 'user_password' => random_int(1, 9999),
                 'user_avatar' => random_int(1, 9999),
